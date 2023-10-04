@@ -1,11 +1,13 @@
+var $4ZQwy$quill = require("quill");
+
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+}
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
 }
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
-}
-function $parcel$interopDefault(a) {
-  return a && a.__esModule ? a.default : a;
 }
 
 $parcel$defineInteropFlag(module.exports);
@@ -29,7 +31,8 @@ var $dfe3295af169d557$exports = {};
 $dfe3295af169d557$exports = JSON.parse("{\"ID_PREFIX\":\"QUILL_ATTACHMENT\"}");
 
 
-const $ae2dda078d13e372$var$Module = Quill.import('core/module');
+
+const $ae2dda078d13e372$var$Module = $parcel$interopDefault($4ZQwy$quill).import('core/module');
 const $ae2dda078d13e372$var$generateId = ()=>{
     const name = (/*@__PURE__*/$parcel$interopDefault($dfe3295af169d557$exports)).ID_PREFIX;
     const id = new Date().getTime();
@@ -95,7 +98,8 @@ class $ae2dda078d13e372$export$9099ad97b570f7c extends $ae2dda078d13e372$var$Mod
 }
 
 
-Quill.register({
+
+$parcel$interopDefault($4ZQwy$quill).register({
     'formats/attachment': $6eb4b7177b9af429$export$9099ad97b570f7c
 });
 var $75af697ace5b2e46$export$9099ad97b570f7c = $ae2dda078d13e372$export$9099ad97b570f7c;

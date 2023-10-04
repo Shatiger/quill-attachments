@@ -1,3 +1,5 @@
+import $5DPjF$quill from "quill";
+
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
 }
@@ -19,7 +21,8 @@ var $c519769cb60f3fe6$exports = {};
 $c519769cb60f3fe6$exports = JSON.parse("{\"ID_PREFIX\":\"QUILL_ATTACHMENT\"}");
 
 
-const $08bece949e9c5358$var$Module = Quill.import('core/module');
+
+const $08bece949e9c5358$var$Module = $5DPjF$quill.import('core/module');
 const $08bece949e9c5358$var$generateId = ()=>{
     const name = (/*@__PURE__*/$parcel$interopDefault($c519769cb60f3fe6$exports)).ID_PREFIX;
     const id = new Date().getTime();
@@ -85,7 +88,8 @@ class $08bece949e9c5358$export$9099ad97b570f7c extends $08bece949e9c5358$var$Mod
 }
 
 
-Quill.register({
+
+$5DPjF$quill.register({
     'formats/attachment': $434c7ee89e186ac0$export$9099ad97b570f7c
 });
 var $998a35880d9928cc$export$9099ad97b570f7c = $08bece949e9c5358$export$9099ad97b570f7c;

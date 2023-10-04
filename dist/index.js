@@ -13,7 +13,8 @@ function $parcel$export(e, n, v, s) {
 $parcel$defineInteropFlag(module.exports);
 
 $parcel$export(module.exports, "default", function () { return $75af697ace5b2e46$export$9099ad97b570f7c; });
-const $6eb4b7177b9af429$var$Link = Quill.import('formats/link');
+
+const $6eb4b7177b9af429$var$Link = $parcel$interopDefault($4ZQwy$quill).import('formats/link');
 class $6eb4b7177b9af429$export$9099ad97b570f7c extends $6eb4b7177b9af429$var$Link {
     static create(value) {
         const node = super.create(value);

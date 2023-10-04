@@ -3,7 +3,8 @@ import $5DPjF$quill from "quill";
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
 }
-const $434c7ee89e186ac0$var$Link = Quill.import('formats/link');
+
+const $434c7ee89e186ac0$var$Link = $5DPjF$quill.import('formats/link');
 class $434c7ee89e186ac0$export$9099ad97b570f7c extends $434c7ee89e186ac0$var$Link {
     static create(value) {
         const node = super.create(value);

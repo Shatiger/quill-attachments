@@ -26,7 +26,7 @@ export default class AttachmentModule extends Module {
 
     this.quill
       .getModule("toolbar")
-      .addHandler("image", this.selectLocalImage.bind(this));
+      .addHandler("file", this.selectLocalImage.bind(this));
   }
 
   selectLocalImage() {

@@ -21,10 +21,6 @@ export default class AttachmentModule extends Module {
       console.warn('[Missing config] upload function that returns a promise is required');
     }
 
-    if (typeof (this.options.render) !== "function") {
-      console.warn('[Missing config] render function that returns a doom node is required');
-    }
-
     this.quill
       .getModule("toolbar")
       .addHandler("file", this.selectLocalImage.bind(this));

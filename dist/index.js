@@ -18,10 +18,14 @@ const $6eb4b7177b9af429$var$Link = $parcel$interopDefault($4ZQwy$quill).import('
 class $6eb4b7177b9af429$export$9099ad97b570f7c extends $6eb4b7177b9af429$var$Link {
     static create(value) {
         const node = super.create(value);
-        const { properties: properties , id: id , render: render  } = value;
+        const { properties: properties , id: id  } = value;
         node.setAttribute('id', id);
         node.setAttribute('href', null);
-        return render(node, properties);
+        return this.render(node, properties);
+    }
+    render(node, properties) {
+        node.textContent = properties.file.name;
+        return node;
     }
 }
 $6eb4b7177b9af429$export$9099ad97b570f7c.blotName = 'attachment';

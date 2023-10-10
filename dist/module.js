@@ -11,9 +11,9 @@ class $434c7ee89e186ac0$export$9099ad97b570f7c extends $434c7ee89e186ac0$var$Lin
         const { properties: properties , id: id  } = value;
         node.setAttribute('id', id);
         node.setAttribute('href', null);
-        return this.render(node, properties);
+        return $434c7ee89e186ac0$export$9099ad97b570f7c.render(node, properties);
     }
-    render(node, properties) {
+    static render(node, properties) {
         node.textContent = properties.file.name;
         return node;
     }

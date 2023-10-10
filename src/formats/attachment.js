@@ -9,10 +9,10 @@ export default class Attachment extends Link {
     const { properties, id } = value
     node.setAttribute('id', id);
     node.setAttribute('href', null);
-    return this.render(node, properties);
+    return Attachment.render(node, properties);
   }
 
-  render(node, properties) {
+  static render(node, properties) {
     node.textContent = properties.file.name
     return node
   }

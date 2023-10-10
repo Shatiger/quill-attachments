@@ -1,6 +1,5 @@
 import constant from './constants';
 import Quill from 'quill'
-import Delta from 'quill-delta'
 
 const Module = Quill.import('core/module');
 
@@ -30,7 +29,7 @@ export default class AttachmentModule extends Module {
       .getModule('clipboard')
 			.addMatcher('A', (node, delta) => {
 				if (delta.ops && delta.ops[0] && delta.ops[0].attributes && delta.ops[0].attributes.attachment) {
-					const newDelta = new Delta()
+					const newDelta = { ops: null }
 					newDelta.ops = [
 						{
 							attributes: {

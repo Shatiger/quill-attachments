@@ -1,5 +1,4 @@
 var $4ZQwy$quill = require("quill");
-var $4ZQwy$quilldelta = require("quill-delta");
 
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
@@ -35,7 +34,6 @@ $6eb4b7177b9af429$export$9099ad97b570f7c.tagName = 'a';
 
 var $dfe3295af169d557$exports = {};
 $dfe3295af169d557$exports = JSON.parse("{\"ID_PREFIX\":\"QUILL_ATTACHMENT\"}");
-
 
 
 
@@ -102,7 +100,9 @@ class $ae2dda078d13e372$export$9099ad97b570f7c extends $ae2dda078d13e372$var$Mod
         this.quill.getModule("toolbar").addHandler("file", this.selectLocalImage.bind(this));
         this.quill.getModule('clipboard').addMatcher('A', (node, delta)=>{
             if (delta.ops && delta.ops[0] && delta.ops[0].attributes && delta.ops[0].attributes.attachment) {
-                const newDelta = new $parcel$interopDefault($4ZQwy$quilldelta)();
+                const newDelta = {
+                    ops: null
+                };
                 newDelta.ops = [
                     {
                         attributes: {

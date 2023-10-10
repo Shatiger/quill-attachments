@@ -1,5 +1,4 @@
 import $5DPjF$quill from "quill";
-import $5DPjF$quilldelta from "quill-delta";
 
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
@@ -25,7 +24,6 @@ $434c7ee89e186ac0$export$9099ad97b570f7c.tagName = 'a';
 
 var $c519769cb60f3fe6$exports = {};
 $c519769cb60f3fe6$exports = JSON.parse("{\"ID_PREFIX\":\"QUILL_ATTACHMENT\"}");
-
 
 
 
@@ -92,7 +90,9 @@ class $08bece949e9c5358$export$9099ad97b570f7c extends $08bece949e9c5358$var$Mod
         this.quill.getModule("toolbar").addHandler("file", this.selectLocalImage.bind(this));
         this.quill.getModule('clipboard').addMatcher('A', (node, delta)=>{
             if (delta.ops && delta.ops[0] && delta.ops[0].attributes && delta.ops[0].attributes.attachment) {
-                const newDelta = new $5DPjF$quilldelta();
+                const newDelta = {
+                    ops: null
+                };
                 newDelta.ops = [
                     {
                         attributes: {

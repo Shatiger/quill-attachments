@@ -1,5 +1,6 @@
 import constant from './constants';
 import Quill from 'quill'
+import Delta from 'quill-delta'
 
 const Module = Quill.import('core/module');
 

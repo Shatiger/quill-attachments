@@ -88,7 +88,7 @@ class $08bece949e9c5358$export$9099ad97b570f7c extends $08bece949e9c5358$var$Mod
         this.range = null;
         if (typeof this.options.upload !== "function") console.warn('[Missing config] upload function that returns a promise is required');
         this.quill.getModule("toolbar").addHandler("file", this.selectLocalImage.bind(this));
-        this.quillEditorRef.getModule('clipboard').addMatcher('A', (node, delta)=>{
+        this.quill.getModule('clipboard').addMatcher('A', (node, delta)=>{
             if (delta.ops && delta.ops[0] && delta.ops[0].attributes && delta.ops[0].attributes.attachment) {
                 const newDelta = new Delta();
                 newDelta.ops = [

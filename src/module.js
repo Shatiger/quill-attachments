@@ -25,7 +25,8 @@ export default class AttachmentModule extends Module {
       .getModule("toolbar")
       .addHandler("file", this.selectLocalImage.bind(this));
 
-    this.quillEditorRef.getModule('clipboard')
+    this.quill
+      .getModule('clipboard')
 			.addMatcher('A', (node, delta) => {
 				if (delta.ops && delta.ops[0] && delta.ops[0].attributes && delta.ops[0].attributes.attachment) {
 					const newDelta = new Delta()

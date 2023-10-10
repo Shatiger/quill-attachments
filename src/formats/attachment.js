@@ -5,7 +5,6 @@ const Link = Quill.import('formats/link');
 export default class Attachment extends Link {
 
   static create(value) {
-    console.log(value);
     const node = super.create(value);
     const { properties, id } = value
     node.setAttribute('id', id);

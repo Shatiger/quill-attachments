@@ -7,7 +7,6 @@ function $parcel$interopDefault(a) {
 const $434c7ee89e186ac0$var$Link = $5DPjF$quill.import('formats/link');
 class $434c7ee89e186ac0$export$9099ad97b570f7c extends $434c7ee89e186ac0$var$Link {
     static create(value) {
-        console.log(value);
         const node = super.create(value);
         const { properties: properties , id: id  } = value;
         node.setAttribute('id', id);
@@ -89,6 +88,21 @@ class $08bece949e9c5358$export$9099ad97b570f7c extends $08bece949e9c5358$var$Mod
         this.range = null;
         if (typeof this.options.upload !== "function") console.warn('[Missing config] upload function that returns a promise is required');
         this.quill.getModule("toolbar").addHandler("file", this.selectLocalImage.bind(this));
+        this.quillEditorRef.getModule('clipboard').addMatcher('A', (node, delta)=>{
+            if (delta.ops && delta.ops[0] && delta.ops[0].attributes && delta.ops[0].attributes.attachment) {
+                const newDelta = new Delta();
+                newDelta.ops = [
+                    {
+                        attributes: {
+                            link: delta.ops[0].attributes.attachment
+                        },
+                        insert: delta.ops[0].insert
+                    }, 
+                ];
+                return newDelta;
+            }
+            return delta;
+        });
     }
 }
 
